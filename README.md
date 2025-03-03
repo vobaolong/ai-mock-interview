@@ -1,55 +1,75 @@
-# React + TypeScript + Vite
+# AI Mock Interview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI Mock Interview is an application that helps users practice interviews with artificial intelligence. The app uses AI to generate questions, evaluate responses, and provide feedback to improve interview skills.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
+- **React**: Modern and smooth user interface development.
+- **TypeScript**: Enhances code safety and maintainability.
+- **Firebase**: Data storage, user authentication, and app deployment.
+- **Clerk**: Authentication and user management.
+- **ShadCN**: Beautiful, easy-to-use, and customizable UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Setup and Run the Project
 
-## Expanding the ESLint configuration
+### Requirements
+- Node.js >= 16
+- pnpm
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/vobaolong/ai-mock-interview.git
+cd ai-mock-interview
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Install dependencies
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Run the Application
+```bash
+pnpm run dev
 ```
-"# ai-mock-interview" 
+
+The application will run at `http://localhost:3000`.
+
+## 📌 Key Features
+- AI-powered mock interviews.
+- Response evaluation and feedback.
+- Supports multiple interview fields.
+- User interview history storage.
+- User-friendly and intuitive UI.
+
+## 🔧 Environment Variables
+The `.env` file should be created in the root directory with the following variables:
+
+| Variable                         | Description                    |
+|----------------------------------|--------------------------------|
+| VITE_CLERK_PUBLISHABLE_KEY      | Your Clerk publishable key     |
+| CLERK_SECRET_KEY                | Your Clerk secret key          |
+| VITE_FIREBASE_API_KEY           | Firebase API key               |
+| VITE_FIREBASE_AUTH_DOMAIN       | Firebase auth domain           |
+| VITE_FIREBASE_PROJECT_ID        | Firebase project ID            |
+| VITE_FIREBASE_STORAGE_BUCKET    | Firebase storage bucket        |
+| VITE_FIREBASE_MESSAGING_SENDER_ID | Firebase messaging sender ID  |
+| VITE_FIREBASE_APP_ID            | Firebase app ID                |
+| VITE_GEMINI_API_KEY             | Gemini API key                 |
+
+## 📄 Documentation
+- [React Documentation](https://react.dev/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [Clerk Documentation](https://clerk.com/docs)
+- [ShadCN Documentation](https://ui.shadcn.com/)
+
+## 📜 License
+This project is licensed under the **MIT License**. Feel free to use and contribute.
+
+## 🤝 Contributions
+We welcome contributions from the community! If you have any ideas or find bugs, please create an issue or submit a pull request.
+
+## 📞 Contact
+If you have any questions, feel free to reach out via email: **work.vobaolong@gmail.com**
+
+---
+
+Thank you for using AI Mock Interview! 🚀
