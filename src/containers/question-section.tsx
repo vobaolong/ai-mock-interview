@@ -1,57 +1,57 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
-import { TooltipButton } from "@/components/tooltip-button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Volume2, VolumeX } from "lucide-react";
-import { RecordAnswer } from "./record-answer";
+import { TooltipButton } from '@/components/tooltip-button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Volume2, VolumeX } from 'lucide-react'
+import { RecordAnswer } from './record-answer'
 
 interface QuestionSectionProps {
-  questions: { question: string; answer: string }[];
+  questions: { question: string; answer: string }[]
 }
 
 export const QuestionSection = ({ questions }: QuestionSectionProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isWebCam, setIsWebCam] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isWebCam, setIsWebCam] = useState(false)
   const [currentSpeech, setCurrentSpeech] =
-    useState<SpeechSynthesisUtterance | null>(null);
+    useState<SpeechSynthesisUtterance | null>(null)
 
   const handlePlayQuestion = (qst: string) => {
     if (isPlaying && currentSpeech) {
       // stop the speech if already playing
-      window.speechSynthesis.cancel();
-      setIsPlaying(false);
-      setCurrentSpeech(null);
+      window.speechSynthesis.cancel()
+      setIsPlaying(false)
+      setCurrentSpeech(null)
     } else {
       // start speech if not currently playing
-      if ("speechSynthesis" in window) {
-        const speech = new SpeechSynthesisUtterance(qst);
-        window.speechSynthesis.speak(speech);
-        setIsPlaying(true);
-        setCurrentSpeech(speech);
+      if ('speechSynthesis' in window) {
+        const speech = new SpeechSynthesisUtterance(qst)
+        window.speechSynthesis.speak(speech)
+        setIsPlaying(true)
+        setCurrentSpeech(speech)
 
         // handle the speech end
         speech.onend = () => {
-          setIsPlaying(false);
-          setCurrentSpeech(null);
-        };
+          setIsPlaying(false)
+          setCurrentSpeech(null)
+        }
       }
     }
-  };
+  }
 
   return (
-    <div className="w-full min-h-96 border rounded-md p-4">
+    <div className='w-full p-4 border rounded-md min-h-96'>
       <Tabs
         defaultValue={questions[0]?.question}
-        className="w-full space-y-12"
-        orientation="vertical"
+        className='w-full space-y-12'
+        orientation='vertical'
       >
-        <TabsList className="bg-transparent w-full flex flex-wrap items-center justify-start gap-4">
+        <TabsList className='flex flex-wrap items-center justify-start w-full gap-4 bg-transparent'>
           {questions?.map((tab, i) => (
             <TabsTrigger
               className={cn(
-                "data-[state=active]:bg-emerald-200 data-[state=active]:shadow-md text-xs px-2"
+                'data-[state=active]:bg-emerald-200 data-[state=active]:shadow-md text-xs px-2'
               )}
               key={tab.question}
               value={tab.question}
@@ -63,18 +63,18 @@ export const QuestionSection = ({ questions }: QuestionSectionProps) => {
 
         {questions?.map((tab, i) => (
           <TabsContent key={i} value={tab.question}>
-            <p className="text-base text-left tracking-wide text-neutral-500">
+            <p className='text-base tracking-wide text-left text-neutral-500'>
               {tab.question}
             </p>
 
-            <div className="w-full flex items-center justify-end">
+            <div className='flex items-center justify-end w-full'>
               <TooltipButton
-                content={isPlaying ? "Stop" : "Start"}
+                content={isPlaying ? 'Stop' : 'Start'}
                 icon={
                   isPlaying ? (
-                    <VolumeX className="min-w-5 min-h-5 text-muted-foreground" />
+                    <VolumeX className='min-w-5 min-h-5 text-muted-foreground' />
                   ) : (
-                    <Volume2 className="min-w-5 min-h-5 text-muted-foreground" />
+                    <Volume2 className='min-w-5 min-h-5 text-muted-foreground' />
                   )
                 }
                 onClick={() => handlePlayQuestion(tab.question)}
@@ -90,5 +90,5 @@ export const QuestionSection = ({ questions }: QuestionSectionProps) => {
         ))}
       </Tabs>
     </div>
-  );
-};
+  )
+}
