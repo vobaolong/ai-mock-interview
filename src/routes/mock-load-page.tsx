@@ -14,6 +14,7 @@ import { InterviewPin } from '@/components/interview-pin'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 
 import { Interview } from '@/types'
+import { cn } from '@/lib/utils'
 
 export const MockLoadPage = () => {
   const { interviewId } = useParams<{ interviewId: string }>()
@@ -65,7 +66,10 @@ export const MockLoadPage = () => {
         />
 
         <Link to={`/generate/interview/${interviewId}/start`}>
-          <Button size={'sm'}>
+          <Button
+            className='cursor-pointer rounded-sm bg-blue-600 hover:bg-blue-900'
+            size={'sm'}
+          >
             Start <Sparkles />
           </Button>
         </Link>
@@ -107,7 +111,15 @@ export const MockLoadPage = () => {
       </div>
 
       <div className='flex items-center justify-center'>
-        <Button onClick={() => setIsWebCamEnabled(!isWebCamEnabled)}>
+        <Button
+          className={cn(
+            'rounded-sm cursor-pointer bg-blue-600 hover:bg-blue-900',
+            {
+              'bg-red-600 hover:bg-red-900': isWebCamEnabled
+            }
+          )}
+          onClick={() => setIsWebCamEnabled(!isWebCamEnabled)}
+        >
           {isWebCamEnabled ? 'Disable Webcam' : 'Enable Webcam'}
         </Button>
       </div>
