@@ -116,7 +116,7 @@ export const InterviewPin = ({
               onClick={() => {
                 navigate(`/generate/${data.id}`, { replace: true })
               }}
-              disbaled={false}
+              disabled={false}
               buttonClassName='hover:text-red-500'
               icon={<Pencil />}
               loading={false}
@@ -126,7 +126,7 @@ export const InterviewPin = ({
               content='Delete'
               buttonVariant={'ghost'}
               onClick={onDelete}
-              disbaled={false}
+              disabled={false}
               buttonClassName='hover:text-red-500'
               icon={<Trash2 />}
               loading={loading}
@@ -138,7 +138,7 @@ export const InterviewPin = ({
               onClick={() => {
                 navigate(`/generate/feedback/${data.id}`, { replace: true })
               }}
-              disbaled={false}
+              disabled={false}
               buttonClassName='hover:text-emerald-500'
               icon={<Newspaper />}
               loading={false}
@@ -150,7 +150,7 @@ export const InterviewPin = ({
               onClick={() => {
                 navigate(`/generate/interview/${data.id}`, { replace: true })
               }}
-              disbaled={false}
+              disabled={false}
               buttonClassName='hover:text-sky-500'
               icon={<Sparkles />}
               loading={false}
