@@ -97,8 +97,11 @@ export const Dashboard = () => {
             </p>
 
             <Link to={'/generate/create'} className='mt-4'>
-              <Button size={'sm'}>
-                <Plus className='mr-1 min-w-5 min-h-5' />
+              <Button
+                className='rounded-sm bg-blue-600 hover:to-blue-900'
+                size={'sm'}
+              >
+                <Plus className='min-w-5 min-h-5' />
                 Add New
               </Button>
             </Link>

@@ -3,13 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { toast } from 'sonner'
 import { Lightbulb } from 'lucide-react'
-
 import { db } from '@/config/firebase.config'
 import { LoaderPage } from '@/views/loader-page'
-
 import { CustomBreadCrumb } from '@/components/custom-bread-crumb'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
-
 import { Interview } from '@/types'
 import { QuestionSection } from '@/containers/question-section'
 
