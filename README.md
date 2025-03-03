@@ -18,7 +18,7 @@ AI Mock Interview is an application that helps users practice interviews with ar
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/your-repo/ai-mock-interview.git
+git clone https://github.com/vobaolong/ai-mock-interview.git
 cd ai-mock-interview
 
 # Install dependencies
