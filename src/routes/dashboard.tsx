@@ -52,16 +52,17 @@ export const Dashboard = () => {
   return (
     <>
       <div className='flex items-center justify-between w-full'>
-        {/* heading */}
         <Headings
           title='Dashboard'
-          description='Create and start you AI Mock interview'
+          description='Create and start you AI Mock Interview'
         />
-        {/* action button */}
 
         <Link to={'/generate/create'}>
-          <Button size={'sm'}>
-            <Plus className='mr-1 min-w-5 min-h-5' />
+          <Button
+            className='bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-900'
+            size={'sm'}
+          >
+            <Plus className='min-w-5 min-h-5' />
             Add new
           </Button>
         </Link>

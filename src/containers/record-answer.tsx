@@ -155,7 +155,7 @@ export const RecordAnswer = ({
     const currentQuestion = question.question
 
     try {
-      // query the firbase to check if the user answer already exists for this question
+      // query the firebase to check if the user answer already exists for this question
 
       const userAnswerQuery = query(
         collection(db, 'userAnswers'),
@@ -165,7 +165,7 @@ export const RecordAnswer = ({
 
       const querySnap = await getDocs(userAnswerQuery)
 
-      // if the user already answerd the question dont save it again
+      // if the user already answered the question don't save it again
       if (!querySnap.empty) {
         console.log('Query Snap Size', querySnap.size)
         toast.info('Already Answered', {
@@ -210,7 +210,6 @@ export const RecordAnswer = ({
   }
 
   useEffect(() => {
-    // combine all transcripts into a single answers
     const combinedTranscripts = results
       .filter((result): result is ResultType => typeof result !== 'string')
       .map((result) => result.transcript)
@@ -284,14 +283,14 @@ export const RecordAnswer = ({
             )
           }
           onClick={() => setOpen(!open)}
-          disbaled={!aiResult}
+          disabled={!aiResult}
         />
       </div>
 
       <div className='w-full p-4 mt-4 border rounded-md bg-gray-50'>
         <h2 className='text-lg font-semibold'>Your Answer:</h2>
         <p className='mt-2 text-sm text-gray-700 whitespace-normal'>
-          {userAnswer || 'Start recording to see your ansewer here'}
+          {userAnswer || 'Start recording to see your answer here'}
         </p>
 
         {interimResult && (

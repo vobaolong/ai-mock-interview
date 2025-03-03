@@ -44,10 +44,9 @@ const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
 
 export const Footer = () => {
   return (
-    <div className='w-full py-8 text-gray-300 bg-black hover:text-gray-100'>
+    <div className='w-full py-8 text-gray-300 bg-blue-900 hover:text-gray-100'>
       <Container>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-4'>
-          {/* First Column: Links */}
           <div>
             <h3 className='mb-4 text-lg font-bold'>Quick Links</h3>
             <ul className='space-y-2'>
@@ -59,17 +58,16 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Second Column: About Us */}
           <div>
             <h3 className='mb-4 text-lg font-bold'>About Us</h3>
             <p>
-              We are committed to helping you unlock your full potential with
-              AI-powered tools. Our platform offers a wide range of resources to
-              improve your interview skills and chances of success.
+              We are dedicated to helping you reach your full potential with
+              AI-powered tools. Our platform provides a variety of resources to
+              enhance your interview skills and increase your chances of
+              success.
             </p>
           </div>
 
-          {/* Third Column: Services */}
           <div>
             <h3 className='mb-4 text-lg font-bold'>Services</h3>
             <ul>
@@ -88,7 +86,7 @@ export const Footer = () => {
           {/* Fourth Column: Address and Social Media */}
           <div>
             <h3 className='mb-4 text-lg font-bold'>Contact Us</h3>
-            <p className='mb-4'>123 AI Street, Tech City, 12345</p>
+            <p className='mb-4'>contact.mockinterview@gmail.com</p>
             <div className='flex gap-4'>
               <SocialLink
                 href='https://facebook.com'

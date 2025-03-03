@@ -84,7 +84,7 @@ export const InterviewPin = ({
           <Badge
             key={index}
             variant={'outline'}
-            className='text-xs text-muted-foreground hover:border-emerald-400 hover:bg-emerald-50 hover:text-emerald-900'
+            className='text-xs rounded-sm text-muted-foreground hover:border-blue-400 hover:bg-blue-50 hover:text-blue-900'
           >
             {word}
           </Badge>

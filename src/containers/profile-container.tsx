@@ -9,25 +9,34 @@ export const ProfileContainer = () => {
   if (!isLoaded) {
     return (
       <div className='flex items-center'>
-        <Loader className='min-w-4 min-h-4 animate-spin text-emerald-500' />
+        <Loader className='text-blue-500 min-w-4 min-h-4 animate-spin' />
       </div>
     )
   }
 
   return (
-    <div className='flex items-center gap-6'>
+    <div className='flex items-center gap-5'>
       {isSignedIn ? (
         <UserButton afterSignOutUrl='/' />
       ) : (
         <>
           <Link to={'/sign-in'}>
-            <Button size={'sm'} variant={'outline'}>
+            <Button
+              className='rounded-sm cursor-pointer'
+              size={'sm'}
+              variant={'outline'}
+            >
               Login
             </Button>
           </Link>
 
           <Link to={'/sign-up'}>
-            <Button size={'sm'}>Get Started</Button>
+            <Button
+              className='bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-900'
+              size={'sm'}
+            >
+              Get Started
+            </Button>
           </Link>
         </>
       )}

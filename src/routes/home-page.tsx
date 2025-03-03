@@ -16,31 +16,16 @@ export const HomePage = () => {
               AI Superpower
             </span>
             <span className='font-extrabold text-gray-500'>
-              - A better way to
+              - The smarter way to
             </span>
             <br />
-            improve your interview chances and skills
+            boost your interview success and expertise.
           </h2>
 
           <p className='mt-4 text-sm text-muted-foreground'>
             Boost your interview skills and increase your success rate with
             AI-driven insights. Discover a smarter way to prepare, practice, and
             stand out.
-          </p>
-        </div>
-
-        <div className='flex items-center w-full gap-12 justify-evenly md:px-12 md:py-16 md:items-center md:justify-end'>
-          <p className='text-3xl font-semibold text-center text-gray-900'>
-            250k+
-            <span className='block text-xl font-normal text-muted-foreground'>
-              Offers Received
-            </span>
-          </p>
-          <p className='text-3xl font-semibold text-center text-gray-900'>
-            1.2M+
-            <span className='block text-xl font-normal text-muted-foreground'>
-              Interview Aced
-            </span>
           </p>
         </div>
 
@@ -55,39 +40,63 @@ export const HomePage = () => {
             Interviews Copilot&copy;
           </div>
 
-          <div className='absolute hidden px-4 py-2 rounded-md md:block w-80 bottom-4 right-4 bg-white/60 backdrop-blur-md'>
+          <div className='absolute hidden px-4 py-2 rounded-md md:block w-100 bottom-4 right-4 bg-white/60 backdrop-blur-md'>
             <h2 className='font-semibold text-neutral-800'>Developer</h2>
             <p className='text-sm text-neutral-500'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Laboriosam neque suscipit architecto animi harum? Obcaecati
-              pariatur ratione magni porro? Incidunt corporis iusto labore odit.
-              Consequatur reiciendis aliquid animi suscipit consectetur.
+              AI mock interviews help candidates prepare for real interviews by
+              simulating job-specific questions, evaluating responses, and
+              providing instant feedback. They improve communication skills,
+              identify weaknesses, and boost confidence with personalized,
+              adaptive practice.
             </p>
-
-            <Button className='mt-3'>
-              Generate <Sparkles />
-            </Button>
+            <Link to={'/generate'} className='flex justify-end w-full'>
+              <Button className='mt-3 bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-900'>
+                Generate <Sparkles />
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>
-
-      <div className='w-full my-12'>
-        <Marquee pauseOnHover>
-          <MarqueImg img='/img/logo/firebase.png' />
-          <MarqueImg img='/img/logo/meet.png' />
-          <MarqueImg img='/img/logo/zoom.png' />
-          <MarqueImg img='/img/logo/firebase.png' />
-          <MarqueImg img='/img/logo/microsoft.png' />
-          <MarqueImg img='/img/logo/meet.png' />
-          <MarqueImg img='/img/logo/tailwindcss.png' />
-          <MarqueImg img='/img/logo/microsoft.png' />
-        </Marquee>
-      </div>
+      <Marquee pauseOnHover>
+        <MarqueImg
+          img='/img/logo/firebase.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/meet.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/zoom.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/firebase.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/microsoft.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/meet.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/tailwindcss.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+        <MarqueImg
+          img='/img/logo/microsoft.png'
+          className='!w-30 !h-30 md:w-20 md:h-20'
+        />
+      </Marquee>
 
       <Container className='py-8 space-y-8'>
         <h2 className='text-xl font-semibold tracking-wide text-gray-800'>
-          Unleash your potential with personalized AI insights and targeted
-          interview practice.
+          AI-powered mock interviews simulate real interview scenarios, assess
+          responses, and provide instant feedback, helping candidates refine
+          their skills, build confidence, and improve their chances of success.
         </h2>
 
         <div className='grid grid-cols-1 gap-3 md:grid-cols-5'>
@@ -101,14 +110,14 @@ export const HomePage = () => {
 
           <div className='flex flex-col items-center justify-center w-full col-span-1 gap-8 text-center md:col-span-2 max-h-96 min-h-96'>
             <p className='text-center text-muted-foreground'>
-              Transform the way you prepare, gain confidence, and boost your
-              chances of landing your dream job. Let AI be your edge in
+              Enhance your preparation, build confidence, and increase your
+              chances of landing your dream job. Let AI give you the edge in
               today&apos;s competitive job market.
             </p>
 
-            <Link to={'/generate'} className='w-full'>
-              <Button className='w-3/4'>
-                Generate <Sparkles className='ml-2' />
+            <Link to={'/generate'} className='w-3/4 bg-red-50'>
+              <Button className='w-full bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-900'>
+                Generate <Sparkles />
               </Button>
             </Link>
           </div>

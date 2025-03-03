@@ -8,7 +8,7 @@ import ProtectedRoute from './layouts/protected-route'
 import MainLayout from './layouts/main-layout'
 import { Generate } from './views/generate'
 import { PublicLayout } from './layouts/public-layout'
-import { HomePage, SignInPage, SignUpPage } from './routes'
+import { ContactUsPage, HomePage, SignInPage, SignUpPage } from './routes'
 
 export default function App() {
   return (
@@ -18,6 +18,7 @@ export default function App() {
 
         <Route path='/sign-in' element={<SignInPage />} />
         <Route path='/sign-up' element={<SignUpPage />} />
+        <Route path='/contact' element={<ContactUsPage />} />
 
         <Route element={<PublicLayout />}>
           <Route path='/' element={<HomePage />} />
