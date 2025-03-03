@@ -1,5 +1,5 @@
 # AI Mock Interview
-
+![AI Mock Interview Banner](public/img/banner.jpeg)
 AI Mock Interview is an application that helps users practice interviews with artificial intelligence. The app uses AI to generate questions, evaluate responses, and provide feedback to improve interview skills.
 
 ## 🚀 Technologies Used
@@ -73,3 +73,5 @@ If you have any questions, feel free to reach out via email: **work.vobaolong@gm
 ---
 
 Thank you for using AI Mock Interview! 🚀
+
+
