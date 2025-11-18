@@ -44,15 +44,16 @@ The `.env` file should be created in the root directory with the following varia
 
 | Variable                         | Description                    |
 |----------------------------------|--------------------------------|
-| VITE_CLERK_PUBLISHABLE_KEY      | Your Clerk publishable key     |
-| CLERK_SECRET_KEY                | Your Clerk secret key          |
-| VITE_FIREBASE_API_KEY           | Firebase API key               |
-| VITE_FIREBASE_AUTH_DOMAIN       | Firebase auth domain           |
-| VITE_FIREBASE_PROJECT_ID        | Firebase project ID            |
-| VITE_FIREBASE_STORAGE_BUCKET    | Firebase storage bucket        |
-| VITE_FIREBASE_MESSAGING_SENDER_ID | Firebase messaging sender ID  |
-| VITE_FIREBASE_APP_ID            | Firebase app ID                |
-| VITE_GEMINI_API_KEY             | Gemini API key                 |
+| VITE_CLERK_PUBLISHABLE_KEY       | Your Clerk publishable key     |
+| CLERK_SECRET_KEY                 | Your Clerk secret key          |
+| VITE_FIREBASE_API_KEY            | Firebase API key               |
+| VITE_FIREBASE_AUTH_DOMAIN        | Firebase auth domain           |
+| VITE_FIREBASE_PROJECT_ID         | Firebase project ID            |
+| VITE_FIREBASE_STORAGE_BUCKET     | Firebase storage bucket        |
+| VITE_FIREBASE_MESSAGING_SENDER_ID| Firebase messaging sender ID   |
+| VITE_FIREBASE_APP_ID             | Firebase app ID                |
+| VITE_GEMINI_API_KEY              | Gemini API key                 |
+| VITE_GEMINI_MODEL                | Gemini Model                   |
 
 ## 📄 Documentation
 - [React Documentation](https://react.dev/)
