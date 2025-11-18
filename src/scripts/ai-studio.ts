@@ -7,8 +7,11 @@ import {
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY!
 const genAI = new GoogleGenerativeAI(apiKey)
 
+const modelId =
+  import.meta.env.VITE_GEMINI_MODEL_ID || 'models/gemini-2.0-flash-latest'
+
 const model = genAI.getGenerativeModel({
-  model: process.env.VITE_GEMINI_MODEL!
+  model: modelId
 })
 
 const generationConfig = {
